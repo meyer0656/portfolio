@@ -1,0 +1,126 @@
+/* Basic styles and theme */
+:root {
+  --brand: #0d6efd;
+  --muted: #6c757d;
+  --bg: #f8f9fa;
+  --radius: 12px;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg);
+  color: #212529;
+}
+
+/* Section defaults */
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+section {
+  animation: fadeInUp 0.6s ease both;
+}
+
+/* Cards */
+.hover-lift {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.code-sample {
+  background: #0b0b0b;
+  color: #e6edf3;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+/* Ensure card images fill without black bars */
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
+
+/* Video thumbnail card styles */
+.video-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.video-thumb {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.play-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--brand);
+  border: none;
+  color: #fff;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(13, 110, 253, 0.18);
+  cursor: pointer;
+}
+
+.play-btn svg {
+  fill: #fff;
+}
+
+.play-btn:focus {
+  outline: 3px solid rgba(13, 110, 253, 0.18);
+  outline-offset: 4px;
+}
+
+/* Navbar */
+.navbar-brand {
+  letter-spacing: 0.2px;
+}
+
+.navbar-dark.shadow-sm {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+}
+
+/* Focus states */
+a:focus {
+  outline: 2px solid rgba(13, 110, 253, 0.12);
+  outline-offset: 3px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  /* No specific mobile styles needed currently */
+}
